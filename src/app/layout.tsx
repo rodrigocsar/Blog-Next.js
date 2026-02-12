@@ -1,7 +1,15 @@
-import clsx from "clsx";
+import "./globals.css";
 
-export default function HomePage() {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <div className={clsx("text-xl", "font-bold", "bg-amber-300 ")}>layout</div>
+    <>
+      <html>
+        <body>{children}</body>
+      </html>
+    </>
   );
 }
